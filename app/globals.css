@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #102a43;
+  --gold: #d6b477;
+  --cream: #f5f2eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: var(--cream);
+  color: var(--navy);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #d6b477;
+  color: #102a43;
+}
+
+.nav-link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d6b477;
+}
+
+.section-label {
+  margin-bottom: 20px;
+  color: #b18c4e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.section-title {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.section-title span {
+  color: #b18c4e;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(16, 42, 67, 0.1);
+  padding-bottom: 28px;
+  transition: all 0.3s ease;
+}
+
+.contact-row:hover {
+  transform: translateX(-4px);
+}
+
+.contact-icon {
+  display: flex;
+  height: 48px;
+  width: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #102a43;
+  color: #d6b477;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 38px;
+  }
 }
