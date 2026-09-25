@@ -1,36 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "أوديترا | للمحاسبة والخدمات المالية",
+  title: "أوديترا | للمحاسبة والاستشارات المالية",
 
   description:
-    "أوديترا للمحاسبة والخدمات المالية — حلول محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
+    "خدمات محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
 
-  icons: {
-    icon: "/auditra.jpeg",
-    shortcut: "/auditra.jpeg",
-    apple: "/auditra.jpeg",
-  },
+  keywords: [
+    "أوديترا",
+    "Auditra",
+    "محاسبة",
+    "استشارات مالية",
+    "خدمات محاسبية",
+    "محاسب عن بعد",
+    "CFO",
+    "ضريبة القيمة المضافة",
+    "الزكاة",
+    "السعودية",
+  ],
+
+  authors: [
+    {
+      name: "Auditra",
+    },
+  ],
+
+  creator: "Auditra",
 
   openGraph: {
-    title: "أوديترا | للمحاسبة والخدمات المالية",
+    title: "أوديترا | للمحاسبة والاستشارات المالية",
 
     description:
-      "حلول محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
+      "خدمات محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
 
-    url: "http://localhost:3002",
+    url: "https://auditra-flax.vercel.app",
 
     siteName: "أوديترا",
 
@@ -40,10 +44,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "http://localhost:3002/auditra.jpeg",
+        url: "https://auditra-flax.vercel.app/فثسف.jpeg",
         width: 1200,
         height: 630,
-        alt: "أوديترا للمحاسبة والخدمات المالية",
+        alt: "أوديترا للمحاسبة والاستشارات المالية",
       },
     ],
   },
@@ -51,27 +55,29 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "أوديترا | للمحاسبة والخدمات المالية",
+    title: "أوديترا | للمحاسبة والاستشارات المالية",
 
     description:
-      "حلول محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
+      "خدمات محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
 
-    images: ["/auditra.jpeg"],
+    images: ["https://auditra-flax.vercel.app/فثسف.jpeg"],
+  },
+
+  icons: {
+    icon: "/فثسف.jpeg",
+    shortcut: "/فثسف.jpeg",
+    apple: "/فثسف.jpeg",
   },
 };
 
 export default function RootLayout({
   children,
-}: LayoutProps<"/">) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="ar"
-      dir="rtl"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        {children}
-      </body>
+    <html lang="ar" dir="rtl">
+      <body>{children}</body>
     </html>
   );
 }
