@@ -30,11 +30,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "أوديترا | للمحاسبة والاستشارات المالية",
-
     description:
       "خدمات محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
 
-    url: "https://auditra-flax.vercel.app",
+    url: "https://auditra-sa.vercel.app/",
 
     siteName: "أوديترا",
 
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://auditra-flax.vercel.app/فثسف.jpeg",
+        url: "https://auditra-sa.vercel.app/فثسف.jpeg",
         width: 1200,
         height: 630,
         alt: "أوديترا للمحاسبة والاستشارات المالية",
@@ -54,13 +53,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-
     title: "أوديترا | للمحاسبة والاستشارات المالية",
-
     description:
       "خدمات محاسبية ومالية تساعدك على إدارة أعمالك بثقة.",
-
-    images: ["https://auditra-flax.vercel.app/فثسف.jpeg"],
+    images: ["https://auditra-sa.vercel.app/فثسف.jpeg"],
   },
 
   icons: {
